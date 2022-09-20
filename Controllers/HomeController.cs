@@ -10,8 +10,13 @@ namespace AppMVC.Controllers {
         //    _logger = logger;
         //}
 
-        public IActionResult Index() {
-            return View();
+        public IActionResult Index()    
+        {
+            HomeModel home = new HomeModel();
+            home.Nome = "Gabriel Henrique";
+            home.Email = "gabriel_cavazani@hotmail.com";
+
+            return View(home);
         }
 
         public IActionResult Privacy() {
